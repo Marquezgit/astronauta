@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pixel Forge Studio</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+
+background:url(img/astronauta.png);
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+
+/* HEADER */
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 60px;
+
+}
+
+/* LOGO MÁS GRANDE */
+
+.logo img{
+
+height:250px;
+width:auto;
+
+}
+
+/* MENU */
+
+nav{
+
+display:flex;
+justify-content:center;
+flex:1;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+
+margin:0 25px;
+
+font-size:22px;
+
+font-weight:bold;
+
+letter-spacing:1px;
+
+text-shadow:0 0 10px rgba(0,0,0,0.6);
+
+transition:all 0.3s ease;
+
+}
+
+nav a:hover{
+
+color:#00c3ff;
+
+transform:scale(1.1);
+
+}
+
+/* BOTON */
+
+.boton{
+
+background:#00c3ff;
+padding:12px 25px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+.botones-header{
+
+display:flex;
+gap:15px;
+
+}
+
+.perfil{
+
+background:transparent;
+border:2px solid #00c3ff;
+
+padding:12px 25px;
+border-radius:30px;
+
+color:white;
+text-decoration:none;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+.perfil:hover{
+
+background:#00c3ff;
+
+}
+
+/* HERO */
+
+.hero{
+
+display:flex;
+align-items:center;
+height:80vh;
+padding-left:80px;
+
+}
+
+.texto{
+
+max-width:600px;
+
+}
+
+.texto h1{
+
+font-size:70px;
+line-height:1.1;
+
+}
+
+.texto span{
+
+color:#00c3ff;
+
+}
+
+.texto p{
+
+font-size:20px;
+font-weight:bold;
+
+}
+
+/* BOTON PRINCIPAL */
+
+.boton2{
+
+display:inline-block;
+margin-top:20px;
+background:#00c3ff;
+padding:18px 35px;
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+
+}
+
+/* CATEGORIAS */
+
+.categorias{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:40px;
+
+}
+
+/* BOTONES TIPO TECLADO */
+
+.categoria{
+
+background:rgba(0,0,0,0.55);
+
+padding:18px 28px;
+
+border-radius:12px;
+
+font-size:18px;
+font-weight:bold;
+
+display:flex;
+align-items:center;
+gap:10px;
+
+cursor:pointer;
+
+box-shadow:
+0 6px 0 #111,
+0 10px 20px rgba(0,0,0,0.5);
+
+transition:all 0.2s ease;
+
+}
+
+/* EFECTO HOVER */
+
+.categoria:hover{
+
+transform:translateY(3px);
+
+box-shadow:
+0 3px 0 #111,
+0 6px 15px rgba(0,0,0,0.4);
+
+background:#00c3ff;
+
+}
+
+/* TARJETAS */
+
+.secciones{
+
+display:flex;
+justify-content:center;
+gap:40px;
+padding:50px;
+
+}
+
+.card{
+
+width:280px;
+height:170px;
+
+border-radius:15px;
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:end;
+
+padding:15px;
+
+font-size:24px;
+font-weight:bold;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+/* IMAGENES */
+
+.rutinas{
+
+background-image:url(img/rutinas.png);
+
+}
+
+.planes{
+
+background-image:url(img/planes.png);
+
+}
+
+.motivacion{
+
+background-image:url(img/motivacion.png);
+
+}
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+padding:25px;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="img/logo.png">
+</div>
+
+<nav>
+
+<a href="#">Inicio</a>
+<a href="#">Entrenar</a>
+<a href="#">Nutrición</a>
+<a href="#">Progreso</a>
+<a href="#">Comunidad</a>
+
+</nav>
+
+<div class="botones-header">
+
+<a class="perfil">👤 Mi perfil</a>
+<a class="boton">Suscribirse</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="texto">
+
+<h1>
+
+ENTRENA.<br>
+EVOLUCIONA.<br>
+<span>CONQUISTA.</span>
+
+</h1>
+
+<p>
+
+Tu mejor versión comienza aquí
+
+</p>
+
+<a class="boton2">Comenzar ahora</a>
+
+</div>
+
+</section>
+
+
+<div class="categorias">
+
+<div class="categoria">🏋️‍♂️ Fuerza</div>
+<div class="categoria">❤️ Cardio</div>
+<div class="categoria">⚡ HIIT</div>
+<div class="categoria">🧘 Yoga</div>
+<div class="categoria">🥗 Nutrición</div>
+<div class="categoria">🌙 Recuperación</div>
+
+</div>
+
+
+<section class="secciones">
+
+<div class="card rutinas">
+Rutinas
+</div>
+
+<div class="card planes">
+Planes
+</div>
+
+<div class="card motivacion">
+Motivación
+</div>
+
+</section>
+
+
+<footer>
+
+Pixel Forge Studio © 2026
+
+</footer>
+
+</body>
+
+</html>
