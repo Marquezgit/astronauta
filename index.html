@@ -15,13 +15,10 @@ margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
 
-background:url(astronauta.png);
+background:url(img/astronauta.png);
 background-size:cover;
-background-position:top center;
-background-repeat:no-repeat;
-background-attachment:scroll;
-
-scroll-behavior:smooth;
+background-position:center;
+background-attachment:fixed;
 }
 
 /* HEADER */
@@ -40,7 +37,7 @@ padding:20px 60px;
 
 .logo img{
 
-height:180px;
+height:250px;
 width:auto;
 
 }
@@ -270,33 +267,11 @@ box-shadow:0 10px 25px rgba(0,0,0,0.4);
 
 #rutinas-info,
 #planes-info,
-#motivacion-info,
-#fuerza-info,
-#cardio-info,
-#hiit-info,
-#yoga-info,
-#nutricion-info,
-#recuperacion-info{
+#motivacion-info{
 
 padding:80px 60px;
 
-background:linear-gradient(
-rgba(0,0,0,0.75),
-rgba(0,0,0,0.6)
-);
-
-margin:40px;
-
-border-radius:15px;
-
-}
-
-padding:80px 60px;
-
-background:linear-gradient(
-rgba(0,0,0,0.75),
-rgba(0,0,0,0.6)
-);
+background:rgba(0,0,0,0.6);
 
 margin:40px;
 
@@ -306,19 +281,7 @@ border-radius:15px;
 
 #rutinas-info h2,
 #planes-info h2,
-#motivacion-info h2,
-#fuerza-info h2,
-#cardio-info h2,
-#hiit-info h2,
-#yoga-info h2,
-#nutricion-info h2,
-#recuperacion-info h2{
-
-font-size:36px;
-
-margin-bottom:20px;
-
-}
+#motivacion-info h2{
 
 font-size:36px;
 
@@ -330,28 +293,28 @@ margin-bottom:20px;
 
 .rutinas{
 
-background-image:url(rutinas.png);
+background-image:url(img/rutinas.png);
 
 }
 
 .planes{
 
-background-image:url(planes.png);
+background-image:url(img/planes.png);
 
 }
 
 .motivacion{
 
-background-image:url(motivacion.png);
+background-image:url(img/motivacion.png);
 
 }
 
 .progreso{
-background-image:url(progreso.png);
+background-image:url(img/progreso.png);
 }
 
 .ciencia{
-background-image:url(ciencia.png);
+background-image:url(img/ciencia.png);
 }
 
 /* FOOTER */
@@ -361,57 +324,6 @@ footer{
 text-align:center;
 padding:25px;
 font-weight:bold;
-
-}
-
-@media (max-width:768px){
-
-body{
-background-size:contain;
-background-position:top center;
-}
-
-header{
-flex-direction:column;
-padding:20px;
-}
-
-.logo img{
-height:120px;
-}
-
-nav{
-flex-wrap:wrap;
-gap:10px;
-}
-
-nav a{
-font-size:16px;
-margin:5px;
-}
-
-.hero{
-padding-left:20px;
-height:auto;
-}
-
-.texto h1{
-font-size:40px;
-}
-
-.texto p{
-font-size:16px;
-}
-
-.secciones{
-overflow-x:auto;
-padding:20px;
-}
-
-.card{
-min-width:240px;
-height:150px;
-}
 
 }
 
@@ -441,6 +353,8 @@ height:150px;
 
 <a class="perfil">👤 Mi perfil</a>
 <a class="boton">Suscribirse</a>
+
+</div>
 
 </div>
 
@@ -474,12 +388,12 @@ Tu mejor versión comienza aquí
 
 <div class="categorias">
 
-<a href="#fuerza-info" class="categoria">🏋️‍♂️ Fuerza</a>
-<a href="#cardio-info" class="categoria">❤️ Cardio</a>
-<a href="#hiit-info" class="categoria">⚡ HIIT</a>
-<a href="#yoga-info" class="categoria">🧘 Yoga</a>
-<a href="#nutricion-info" class="categoria">🥗 Nutrición</a>
-<a href="#recuperacion-info" class="categoria">🌙 Recuperación</a>
+<div class="categoria">🏋️‍♂️ Fuerza</div>
+<div class="categoria">❤️ Cardio</div>
+<div class="categoria">⚡ HIIT</div>
+<div class="categoria">🧘 Yoga</div>
+<div class="categoria">🥗 Nutrición</div>
+<div class="categoria">🌙 Recuperación</div>
 
 </div>
 
@@ -543,95 +457,6 @@ Aquí encontrarás contenido para fortalecer tu mentalidad.
 
 </section>
 
-<section id="fuerza-info">
-
-<h2>Entrenamiento de Fuerza</h2>
-
-<p>
-El entrenamiento de fuerza permite desarrollar masa muscular,
-mejorar el metabolismo y aumentar la resistencia física.
-</p>
-
-<p>
-Ejercicios comunes:
-</p>
-
-<ul>
-<li>Press de banca</li>
-<li>Sentadilla</li>
-<li>Peso muerto</li>
-<li>Dominadas</li>
-</ul>
-
-</section>
-
-
-<section id="cardio-info">
-
-<h2>Entrenamiento Cardiovascular</h2>
-
-<p>
-El cardio mejora la salud del corazón,
-aumenta la resistencia y ayuda a quemar grasa.
-</p>
-
-<ul>
-<li>Correr</li>
-<li>Bicicleta</li>
-<li>Saltar cuerda</li>
-<li>Elíptica</li>
-</ul>
-
-</section>
-
-
-<section id="hiit-info">
-
-<h2>Entrenamiento HIIT</h2>
-
-<p>
-HIIT significa High Intensity Interval Training.
-Consiste en intervalos cortos de ejercicio intenso
-con pequeños periodos de descanso.
-</p>
-
-</section>
-
-
-<section id="yoga-info">
-
-<h2>Yoga y Movilidad</h2>
-
-<p>
-El yoga mejora la flexibilidad,
-la movilidad articular y ayuda a reducir el estrés.
-</p>
-
-</section>
-
-
-<section id="nutricion-info">
-
-<h2>Nutrición Deportiva</h2>
-
-<p>
-La nutrición es clave para mejorar el rendimiento,
-ganar músculo y mantener un nivel óptimo de energía.
-</p>
-
-</section>
-
-
-<section id="recuperacion-info">
-
-<h2>Recuperación Muscular</h2>
-
-<p>
-El descanso permite que los músculos se reparen
-y crezcan después del entrenamiento.
-</p>
-
-</section>
 
 <footer>
 
@@ -642,4 +467,14 @@ Pixel Forge Studio © 2026
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
 
