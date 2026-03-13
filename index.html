@@ -1,1 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pixel Forge Studio</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+
+background:url(astronauta.png);
+background-size:cover;
+background-position:top center;
+background-repeat:no-repeat;
+background-attachment:scroll;
+
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 60px;
+
+}
+
+/* LOGO MÁS GRANDE */
+
+.logo img{
+
+height:180px;
+width:auto;
+
+}
+
+/* MENU */
+
+nav{
+
+display:flex;
+justify-content:center;
+flex:1;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+
+margin:0 25px;
+
+font-size:22px;
+
+font-weight:bold;
+
+letter-spacing:1px;
+
+text-shadow:0 0 10px rgba(0,0,0,0.6);
+
+transition:all 0.3s ease;
+
+}
+
+nav a:hover{
+
+color:#00c3ff;
+
+transform:scale(1.1);
+
+}
+
+/* BOTON */
+
+.boton{
+
+background:#00c3ff;
+padding:12px 25px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+.botones-header{
+
+display:flex;
+gap:15px;
+
+}
+
+.perfil{
+
+background:transparent;
+border:2px solid #00c3ff;
+
+padding:12px 25px;
+border-radius:30px;
+
+color:white;
+text-decoration:none;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+.perfil:hover{
+
+background:#00c3ff;
+
+}
+
+/* HERO */
+
+.hero{
+
+display:flex;
+align-items:center;
+height:80vh;
+padding-left:80px;
+
+}
+
+.texto{
+
+max-width:600px;
+
+}
+
+.texto h1{
+
+font-size:70px;
+line-height:1.1;
+
+}
+
+.texto span{
+
+color:#00c3ff;
+
+}
+
+.texto p{
+
+font-size:20px;
+font-weight:bold;
+
+}
+
+/* BOTON PRINCIPAL */
+
+.boton2{
+
+display:inline-block;
+margin-top:20px;
+background:#00c3ff;
+padding:18px 35px;
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-size:18px;
+font-weight:bold;
+
+}
+
+/* CATEGORIAS */
+
+.categorias{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:40px;
+
+}
+
+/* BOTONES TIPO TECLADO */
+
+.categoria{
+
+background:rgba(0,0,0,0.55);
+
+padding:18px 28px;
+
+border-radius:12px;
+
+font-size:18px;
+font-weight:bold;
+
+display:flex;
+align-items:center;
+gap:10px;
+
+cursor:pointer;
+
+box-shadow:
+0 6px 0 #111,
+0 10px 20px rgba(0,0,0,0.5);
+
+transition:all 0.2s ease;
+
+}
+
+/* EFECTO HOVER */
+
+.categoria:hover{
+
+transform:translateY(3px);
+
+box-shadow:
+0 3px 0 #111,
+0 6px 15px rgba(0,0,0,0.4);
+
+background:#00c3ff;
+
+}
+
+/* TARJETAS */
+
+.secciones{
+
+display:flex;
+justify-content:center;
+gap:40px;
+padding:50px;
+
+}
+
+.card{
+
+width:280px;
+height:170px;
+
+border-radius:15px;
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:end;
+
+padding:15px;
+
+font-size:24px;
+font-weight:bold;
+
+color:#8B6B1F; /* dorado oscuro */
+
+text-shadow:0 2px 5px rgba(0,0,0,0.8);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+
+}
+
+#rutinas-info,
+#planes-info,
+#motivacion-info,
+#fuerza-info,
+#cardio-info,
+#hiit-info,
+#yoga-info,
+#nutricion-info,
+#recuperacion-info{
+
+padding:80px 60px;
+
+background:linear-gradient(
+rgba(0,0,0,0.75),
+rgba(0,0,0,0.6)
+);
+
+margin:40px;
+
+border-radius:15px;
+
+}
+
+padding:80px 60px;
+
+background:linear-gradient(
+rgba(0,0,0,0.75),
+rgba(0,0,0,0.6)
+);
+
+margin:40px;
+
+border-radius:15px;
+
+}
+
+#rutinas-info h2,
+#planes-info h2,
+#motivacion-info h2,
+#fuerza-info h2,
+#cardio-info h2,
+#hiit-info h2,
+#yoga-info h2,
+#nutricion-info h2,
+#recuperacion-info h2{
+
+font-size:36px;
+
+margin-bottom:20px;
+
+}
+
+font-size:36px;
+
+margin-bottom:20px;
+
+}
+
+/* IMAGENES */
+
+.rutinas{
+
+background-image:url(rutinas.png);
+
+}
+
+.planes{
+
+background-image:url(planes.png);
+
+}
+
+.motivacion{
+
+background-image:url(motivacion.png);
+
+}
+
+.progreso{
+background-image:url(progreso.png);
+}
+
+.ciencia{
+background-image:url(ciencia.png);
+}
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+padding:25px;
+font-weight:bold;
+
+}
+
+@media (max-width:768px){
+
+body{
+background-size:contain;
+background-position:top center;
+}
+
+header{
+flex-direction:column;
+padding:20px;
+}
+
+.logo img{
+height:120px;
+}
+
+nav{
+flex-wrap:wrap;
+gap:10px;
+}
+
+nav a{
+font-size:16px;
+margin:5px;
+}
+
+.hero{
+padding-left:20px;
+height:auto;
+}
+
+.texto h1{
+font-size:40px;
+}
+
+.texto p{
+font-size:16px;
+}
+
+.secciones{
+overflow-x:auto;
+padding:20px;
+}
+
+.card{
+min-width:240px;
+height:150px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="img/logo.png">
+</div>
+
+<nav>
+
+<a href="#">Inicio</a>
+<a href="#">Entrenar</a>
+<a href="#">Nutrición</a>
+<a href="#">Progreso</a>
+<a href="#">Comunidad</a>
+
+</nav>
+
+<div class="botones-header">
+
+<a class="perfil">👤 Mi perfil</a>
+<a class="boton">Suscribirse</a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="texto">
+
+<h1>
+
+ENTRENA.<br>
+EVOLUCIONA.<br>
+<span>CONQUISTA.</span>
+
+</h1>
+
+<p>
+
+Tu mejor versión comienza aquí
+
+</p>
+
+<a class="boton2">Comenzar ahora</a>
+
+</div>
+
+</section>
+
+
+<div class="categorias">
+
+<a href="#fuerza-info" class="categoria">🏋️‍♂️ Fuerza</a>
+<a href="#cardio-info" class="categoria">❤️ Cardio</a>
+<a href="#hiit-info" class="categoria">⚡ HIIT</a>
+<a href="#yoga-info" class="categoria">🧘 Yoga</a>
+<a href="#nutricion-info" class="categoria">🥗 Nutrición</a>
+<a href="#recuperacion-info" class="categoria">🌙 Recuperación</a>
+
+</div>
+
+
+<section class="secciones">
+
+<a href="#rutinas-info" class="card rutinas">
+Rutinas
+</a>
+
+<a href="#planes-info" class="card planes">
+Planes
+</a>
+
+<a href="#motivacion-info" class="card motivacion">
+Motivación
+</a>
+
+<a href="#progreso-info" class="card progreso">
+Progreso
+</a>
+
+<a href="#ciencia-info" class="card ciencia">
+Ciencia
+</a>
+
+</section>
+
+<section id="rutinas-info">
+
+<h2>Rutinas de Entrenamiento</h2>
+
+<p>
+Descubre rutinas diseñadas para desarrollar fuerza, hipertrofia y resistencia.
+Nuestros programas están diseñados para todos los niveles.
+</p>
+
+</section>
+
+
+<section id="planes-info">
+
+<h2>Planes de Nutrición</h2>
+
+<p>
+Planes nutricionales diseñados para mejorar rendimiento,
+perder grasa o ganar masa muscular.
+</p>
+
+</section>
+
+
+<section id="motivacion-info">
+
+<h2>Motivación y Mentalidad</h2>
+
+<p>
+La disciplina y la constancia son las claves del éxito.
+Aquí encontrarás contenido para fortalecer tu mentalidad.
+</p>
+
+</section>
+
+<section id="fuerza-info">
+
+<h2>Entrenamiento de Fuerza</h2>
+
+<p>
+El entrenamiento de fuerza permite desarrollar masa muscular,
+mejorar el metabolismo y aumentar la resistencia física.
+</p>
+
+<p>
+Ejercicios comunes:
+</p>
+
+<ul>
+<li>Press de banca</li>
+<li>Sentadilla</li>
+<li>Peso muerto</li>
+<li>Dominadas</li>
+</ul>
+
+</section>
+
+
+<section id="cardio-info">
+
+<h2>Entrenamiento Cardiovascular</h2>
+
+<p>
+El cardio mejora la salud del corazón,
+aumenta la resistencia y ayuda a quemar grasa.
+</p>
+
+<ul>
+<li>Correr</li>
+<li>Bicicleta</li>
+<li>Saltar cuerda</li>
+<li>Elíptica</li>
+</ul>
+
+</section>
+
+
+<section id="hiit-info">
+
+<h2>Entrenamiento HIIT</h2>
+
+<p>
+HIIT significa High Intensity Interval Training.
+Consiste en intervalos cortos de ejercicio intenso
+con pequeños periodos de descanso.
+</p>
+
+</section>
+
+
+<section id="yoga-info">
+
+<h2>Yoga y Movilidad</h2>
+
+<p>
+El yoga mejora la flexibilidad,
+la movilidad articular y ayuda a reducir el estrés.
+</p>
+
+</section>
+
+
+<section id="nutricion-info">
+
+<h2>Nutrición Deportiva</h2>
+
+<p>
+La nutrición es clave para mejorar el rendimiento,
+ganar músculo y mantener un nivel óptimo de energía.
+</p>
+
+</section>
+
+
+<section id="recuperacion-info">
+
+<h2>Recuperación Muscular</h2>
+
+<p>
+El descanso permite que los músculos se reparen
+y crezcan después del entrenamiento.
+</p>
+
+</section>
+
+<footer>
+
+Pixel Forge Studio © 2026
+
+</footer>
+
+</body>
+
+</html>
 
