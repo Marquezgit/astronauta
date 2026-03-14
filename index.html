@@ -331,19 +331,23 @@ font-weight:bold;
 
 @media (max-width:768px){
 
-/* FONDO DEL ASTRONAUTA */
-
 body{
 
-background:url(astronauta.png);
+background:
+url(astronauta.png),
+url(cosmos.jpg);
 
-background-size:115%;
-background-position:center -60px; /* ajusta altura del astronauta */
+background-size:115%, cover;
 
-background-repeat:no-repeat;
+background-position:center -60px, center;
+
+background-repeat:no-repeat, no-repeat;
+
 background-attachment:scroll;
 
-background-color:#000; /* elimina fondo blanco */
+background-color:#000;
+
+}
 
 }
 
