@@ -15,7 +15,7 @@ margin:0;
 font-family:Arial, Helvetica, sans-serif;
 color:white;
 
-background:url(astronauta.png);
+background:url(img/astronauta.png);
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
@@ -293,28 +293,28 @@ margin-bottom:20px;
 
 .rutinas{
 
-background-image:url(rutinas.png);
+background-image:url(img/rutinas.png);
 
 }
 
 .planes{
 
-background-image:url(planes.png);
+background-image:url(img/planes.png);
 
 }
 
 .motivacion{
 
-background-image:url(motivacion.png);
+background-image:url(img/motivacion.png);
 
 }
 
 .progreso{
-background-image:url(progreso.png);
+background-image:url(img/progreso.png);
 }
 
 .ciencia{
-background-image:url(ciencia.png);
+background-image:url(img/ciencia.png);
 }
 
 /* FOOTER */
@@ -327,6 +327,74 @@ font-weight:bold;
 
 }
 
+/* ------------------ VERSION MOVIL ------------------ */
+
+@media (max-width:768px){
+
+body{
+background:url(img/astronauta.png);
+background-size:cover;
+background-position:center top;
+background-attachment:scroll;
+}
+
+/* HEADER */
+
+header{
+padding:15px 20px;
+flex-direction:column;
+gap:10px;
+}
+
+/* LOGO */
+
+.logo img{
+height:120px;
+}
+
+/* MENU */
+
+nav{
+flex-wrap:wrap;
+gap:10px;
+}
+
+nav a{
+margin:5px 10px;
+font-size:16px;
+}
+
+/* HERO */
+
+.hero{
+padding-left:20px;
+padding-right:20px;
+height:70vh;
+text-align:left;
+}
+
+.texto h1{
+font-size:38px;
+}
+
+.texto p{
+font-size:16px;
+}
+
+/* TARJETAS */
+
+.secciones{
+flex-direction:column;
+align-items:center;
+gap:25px;
+}
+
+.card{
+width:90%;
+}
+
+}
+
 </style>
 
 </head>
@@ -336,7 +404,7 @@ font-weight:bold;
 <header>
 
 <div class="logo">
-<img src="logo.png">
+<img src="img/logo.png">
 </div>
 
 <nav>
@@ -467,16 +535,3 @@ Pixel Forge Studio © 2026
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
