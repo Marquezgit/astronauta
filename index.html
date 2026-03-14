@@ -331,47 +331,60 @@ font-weight:bold;
 
 @media (max-width:768px){
 
+/* FONDO DEL ASTRONAUTA */
+
 body{
 
-background:
-url(astronauta.png),
-linear-gradient(black,#0a0a0a,#000);
+background:url(astronauta.png);
 
-background-size:120%, cover;
-
-background-position:center top, center;
+background-size:115%;
+background-position:center -60px; /* ajusta altura del astronauta */
 
 background-repeat:no-repeat;
+background-attachment:scroll;
+
+background-color:#000; /* elimina fondo blanco */
 
 }
 
-/* MENU MOVIL */
+/* HEADER JUSTO DEBAJO DEL ASTRONAUTA */
 
 header{
+
+margin-top:220px; /* mueve el menú debajo de los pies */
 flex-direction:column;
 align-items:center;
-padding:10px 15px;
+
+background:rgba(0,0,0,0.75); /* fondo oscuro elegante */
+width:100%;
+
+padding:10px;
+
 }
 
+/* MENU MAS COMPACTO */
+
 nav{
+
 flex-wrap:wrap;
 justify-content:center;
 gap:8px;
-margin-top:10px;
+
 }
 
 nav a{
-font-size:14px;
-margin:5px;
-}
 
-.botones-header{
-margin-top:10px;
-gap:10px;
+font-size:14px;
+margin:4px;
+
 }
 
 .logo img{
-height:120px;
+
+height:110px;
+
+}
+
 }
 
 }
